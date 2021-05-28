@@ -10,15 +10,25 @@ create table tbvendedor
 
 
 drop table if exists tbusuario;
-create table tbusuario
-(
-    usu_id_usuario int auto_increment primary key,
-    usu_nombre_usuario varchar(30),
-    usu_apellido_usuario varchar(30),
-    usu_correo_vendedor varchar(30),
-    usu_estado_de_venta varchar(2),
-    rol.
-);
+CREATE TABLE `tbusuario` (
+  `usu_id_usuario` int(11) NOT NULL,
+  `usu_nombre_usuario` varchar(30) DEFAULT NULL,
+  `usu_apellido_usuario` varchar(30) DEFAULT NULL,
+  `usu_correo_vendedor` varchar(30) DEFAULT NULL,
+  `contrasena` varchar(30) NOT NULL,
+  `num_cel` varchar(20) NOT NULL,
+  `usu_dir` varchar(40) NOT NULL,
+  `recuperacion` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbusuario`
+--
+
+INSERT INTO `tbusuario` (`usu_id_usuario`, `usu_nombre_usuario`, `usu_apellido_usuario`, `usu_correo_vendedor`, `contrasena`, `num_cel`, `usu_dir`, `recuperacion`) VALUES
+(5, 'Andres Felipe', 'rojas', 'andresolmos2784@gmail.com', '78945', '3103977412', 'diagonal 14c numero19-46b', 'skefalutruc'),
+(6, 'clemencia', 'rojas vargas', 'sadasd@gmail.com', '', '304399882', 'diagonal 14c numero19-46b', '');
+
 
 drop table if exists tbproducto;
 create table tbproducto
