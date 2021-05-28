@@ -48,7 +48,7 @@ public class ControllerProduct {
         return mav;
     }
     
-    //test githubasd
+    
 
     @RequestMapping(value = "update_product.htm", method = RequestMethod.GET)
     public ModelAndView udpateProduct(HttpServletRequest req) {
